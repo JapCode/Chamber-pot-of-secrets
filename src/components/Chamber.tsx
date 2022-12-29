@@ -1,17 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import useSize from 'hooks/useResize';
+import { useRef } from 'react';
 
 const Chamber = () => {
-  const svgRef = useRef<HTMLDivElement>(null);
-  const [widthClient, setWidthClient] = useState<number>();
-  const secundaryWidht = svgRef.current?.clientWidth;
-  useEffect(() => {
-    if (svgRef !== null) {
-      const newWidth = svgRef.current?.clientWidth;
-      setWidthClient(newWidth);
-      console.log(newWidth);
-      console.log(widthClient);
-    }
-  }, [svgRef, widthClient]);
+  const svgRef = useRef<HTMLParagraphElement>(null);
+  const size = useSize(svgRef);
   return (
     <div className="relative">
       <svg
@@ -86,7 +78,7 @@ const Chamber = () => {
       <p
         ref={svgRef}
         style={{
-          left: `calc(50% - ${secundaryWidht}px / 2)`,
+          left: `calc(50% - ${size?.width}px / 2)`,
         }}
         className="absolute bottom-[15%] text-center font-witchRegular text-5xl text-white"
       >

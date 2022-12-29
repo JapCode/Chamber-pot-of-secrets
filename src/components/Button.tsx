@@ -1,10 +1,15 @@
 type Props = {
   bgButton: string;
+  bgAction: React.MouseEventHandler<HTMLButtonElement>;
   children: JSX.Element;
 };
-const Button = ({ bgButton, children }: Props) => {
+const Button = ({ bgButton, bgAction, children }: Props) => {
   return (
-    <button className={`h-14 w-72 rounded-md ${bgButton}`} type="button">
+    <button
+      onClick={bgAction}
+      className={`h-14 w-72 rounded-md ${bgButton}`}
+      type="button"
+    >
       {children}
     </button>
   );

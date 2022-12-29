@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react';
+import Auth from 'components/Auth';
 import ButtonCard from 'components/ButtonCard';
 import ChamberIcon from 'components/ChamberIcon';
 import Messages from 'components/Messages';

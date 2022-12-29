@@ -11,6 +11,7 @@ module.exports = {
         googleColor: '#4285F4',
         githubColor: '#333333',
         textGrey: '#9598A6',
+        darkColor: '#1C1C1C',
       },
       fontFamily: {
         interBold: ['interbold', 'sans-serif'],

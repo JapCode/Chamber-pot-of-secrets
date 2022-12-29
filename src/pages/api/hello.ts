@@ -1,7 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
+import config from './config';
 
-const testEnv = process.env.NEXT_PUBLIC_TESTS;
+const testEnv = config.holi;
 
 type Data = {
   name: string;
